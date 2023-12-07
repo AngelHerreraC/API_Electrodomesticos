@@ -1,6 +1,6 @@
 import express from 'express'
 
-import dairyRouter from './routes/diaries'
+import dairyRouter from './routes/routes'
 
 const app = express()
 app.use(express.json())
