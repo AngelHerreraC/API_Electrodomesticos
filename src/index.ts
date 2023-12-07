@@ -1,5 +1,7 @@
 import express from 'express'
 
+import dairyRouter from './routes/diaries'
+
 const app = express()
 app.use(express.json())
 
@@ -13,3 +15,5 @@ app.get('/ping', (_req, res) => {
 app.listen(PORT, () => {
     console.log('')
 })
+
+app.use('api/diaries', dairyRouter)
