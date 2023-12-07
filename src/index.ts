@@ -1,6 +1,6 @@
 import express from 'express'
 
-import dairyRouter from './routes/routes'
+import Router from './routes/routes'
 
 const app = express()
 app.use(express.json())
@@ -16,4 +16,4 @@ app.listen(PORT, () => {
     console.log('')
 })
 
-app.use('api/diaries', dairyRouter)
+app.use('/api', Router)

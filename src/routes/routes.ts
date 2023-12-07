@@ -1,13 +1,19 @@
-import express from 'express'
+import {Router} from 'express'
 
-const router = express.Router()
+import { TaskController } from './controller'
 
-router.get('/', (_req, res)=>{
-    res.send("a")
-})
+const router = Router()
 
-router.post('/', (_req, res)=>{
-    res.send("b")
-})
+const controller = new TaskController();
 
-export default router
+router.post('/tasks', controller.create)
+
+router.get("/tasks", controller.list);
+
+router.get("/tasks/:taskId", controller.get);
+
+router.put("/task/:taskId", controller.update);
+
+router.delete("/task/:taskId", controller.remove);
+
+export default router;
