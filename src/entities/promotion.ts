@@ -1,11 +1,12 @@
 import {
   Entity,
-  Column
+  Column,
+  PrimaryColumn,
 } from "typeorm";
 
 @Entity()
 export class Promotion {
-  @Column()
+  @PrimaryColumn()
   id!: number;
 
   @Column()

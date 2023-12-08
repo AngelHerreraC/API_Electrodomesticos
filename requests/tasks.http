@@ -1,6 +1,6 @@
 ###AAAAAAA send request :3
 
-POST http://localhost:3030/api/tasks
+POST http://localhost:3030/api/users
 
 Content-Type: application/json
 {
@@ -10,7 +10,7 @@ Content-Type: application/json
 
 ###list tasks
 
-GET http://localhost:3030/api/tasks
+GET http://localhost:3030/api/users
 
 ###get tasks
 
