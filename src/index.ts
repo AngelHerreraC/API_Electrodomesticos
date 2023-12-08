@@ -4,6 +4,12 @@ import express from 'express'
 
 import Router from './routes/routes'
 
+import database from './config/database'
+
+database.initialize()
+.then(() => console.log("database connected"))
+.catch(console.error)
+
 const app = express()
 app.use(express.json())
 
