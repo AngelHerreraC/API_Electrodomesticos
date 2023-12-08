@@ -1,33 +1,32 @@
 ###AAAAAAA send request :3
 
-POST http://localhost:3030/api/tasks
+POST http://localhost:3030/api/users
 
 Content-Type: application/json
 {
-    "title" : "Avenged Seven",
+    "name" : "auxilio Seven",
     "description" : "desc"
 }
 
 ###list tasks
 
-GET http://localhost:3030/api/tasks
+GET http://localhost:3030/api/users
 
 ###get tasks
 
-GET http://localhost:3030/api/tasks/1
+GET http://localhost:3030/api/user/1
 
 ###put tasks
 
-PUT http://localhost:3030/api/tasks/1
+PUT http://localhost:3030/api/user/1
 
 Content-Type: application/json
 {
-    "title" : "Avenged Seven",
-    "description" : "desc"
+    "name" : "Avenged Seven",
 }
 
 
 ###delete tasks
 
-DELETE  http://localhost:3030/api/tasks/1
+DELETE  http://localhost:3030/api/user/2
 
