@@ -5,7 +5,7 @@ import Router from './routes/routes'
 const app = express()
 app.use(express.json())
 
-const PORT = 3000
+const PORT = 3030
 
 app.get('/ping', (_req, res) => {
     console.log('ping')
@@ -13,7 +13,7 @@ app.get('/ping', (_req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log('')
+    console.log('server running on port')
 })
 
 app.use('/api', Router)

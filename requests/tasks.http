@@ -1,0 +1,33 @@
+###AAAAAAA send request :3
+
+POST http://localhost:3030/api/tasks
+
+Content-Type: application/json
+{
+    "title" : "Avenged Seven",
+    "description" : "desc"
+}
+
+###list tasks
+
+GET http://localhost:3030/api/tasks
+
+###get tasks
+
+GET http://localhost:3030/api/tasks/1
+
+###put tasks
+
+PUT http://localhost:3030/api/tasks/1
+
+Content-Type: application/json
+{
+    "title" : "Avenged Seven",
+    "description" : "desc"
+}
+
+
+###delete tasks
+
+DELETE  http://localhost:3030/api/tasks/1
+
