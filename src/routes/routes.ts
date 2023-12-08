@@ -6,15 +6,15 @@ const router = Router()
 
 const controller = new TaskController();
 
-router.post('/tasks', controller.create)
+router.post('/users', controller.create)
 
-router.get("/tasks", controller.list);
+router.get("/users", controller.list);
 
-router.get("/tasks/:taskId", controller.get);
+router.get("/user/:userID", controller.get);
 
-router.put("/task/:taskId", controller.update);
+router.put("/user/:userID", controller.update);
 
-router.delete("/task/:taskId", controller.remove);
+router.delete("/user/:userID", controller.remove);
 
 
 export default router;

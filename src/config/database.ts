@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
 
-import { Task } from "../entities/task";
+import { User } from "../entities/user";
 
 export default new DataSource({
     type: "mysql",
@@ -8,8 +8,8 @@ export default new DataSource({
     port: 3306,
     username: "root",
     password: "",
-    database: "todo",
-    entities: [Task],
+    database: "electrodomesticos",
+    entities: [User],
     synchronize: true,
     logging: false
 
