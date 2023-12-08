@@ -30,9 +30,6 @@ export class Product {
   stock!: number;
 
   @Column()
-  updateUserID!: number;
-
-  @Column()
   unitOfMeasurement!: string;
 
   @CreateDateColumn()
