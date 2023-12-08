@@ -1,19 +1,19 @@
 import { Request, Response, NextFunction } from "express";
 import { DatabaseRepository } from "./declarations";
-import { User } from "../entities/user";
+import { Promotion } from "../entities/promotion";
 
-export class TaskController {
+export class PromoController {
 
-  constructor(private repository: DatabaseRepository<User>){}
+  constructor(private repository: DatabaseRepository<Promotion>){}
 
   async create(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
       const body = req.body;
       console.log(body);
 
-      const user = await this.repository.create(body);
+      const product = await this.repository.create(body);
 
-      res.status(200).json(user);
+      res.status(200).json(product);
     } catch (error) {
       next(error);
     }
@@ -21,8 +21,8 @@ export class TaskController {
 
   async list(_req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
-      const users = await this.repository.list();
-      res.status(200).json(users)
+      const products = await this.repository.list();
+      res.status(200).json(products)
     } catch (error) {
       next(error);
     }
@@ -30,8 +30,8 @@ export class TaskController {
 
   async get(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
-      const {userID} = req.params;
-      const user = await this.repository.get(userID)
+      const {productID} = req.params;
+      const user = await this.repository.get(productID)
       res.status(200).json(user)
     } catch (error) {
       next(error);
@@ -40,12 +40,12 @@ export class TaskController {
 
   async update(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
-      const {userID} = req.params
+      const {productID} = req.params
       const body = req.body
 
-      const user = await this.repository.update(userID, body)
+      const product = await this.repository.update(productID, body)
 
-      res.status(200).json(user)
+      res.status(200).json(product)
 
     } catch (error) {
       next(error);
@@ -54,9 +54,9 @@ export class TaskController {
 
   async remove(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
-      const {userID} = req.params
-      const user = await this.repository.remove(userID)
-      res.status(200).json(user);
+      const {productID} = req.params
+      const product = await this.repository.remove(productID)
+      res.status(200).json(product);
     } catch (error) {
       next(error);
     }
