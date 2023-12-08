@@ -26,12 +26,19 @@ export class userRepository implements DatabaseRepository<User>{
         return user;
     }
 
-    update(_id: Id, _data: User, _query?: Query | undefined): Promise<User> {
-        throw new Error("Method not implemented.");
+    async update(id: Id, data: User, query?: Query | undefined): Promise<User> {
+        const repository = database.getRepository(User);
+
+        await repository.update(id, data)
+
+        return this.get(id, query)
     }
 
-    remove(_id: Id, _query?: Query | undefined): Promise<User> {
-        throw new Error("Method not implemented.");
+    async remove(id: Id, query?: Query | undefined): Promise<User> {
+        const repository = database.getRepository(User);
+        const user = await this.get(id, query);
+        repository.delete(id)
+        return user
     }
     
 }
