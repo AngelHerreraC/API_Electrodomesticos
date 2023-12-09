@@ -7,30 +7,21 @@ import {
 } from "typeorm";
 
 @Entity()
-export class Product {
+export class Purchase {
   @PrimaryGeneratedColumn()
   id!: number;
-
-  @Column()
-  name!: string;
 
   @Column()
   description!: string;
 
   @Column()
-  price!: number;
+  clientName!: string;
 
   @Column()
-  category!: string;
+  totalPrice!: number;
 
   @Column()
-  manufacturer!: string;
-
-  @Column()
-  stock!: number;
-
-  @Column()
-  unitOfMeasurement!: string;
+  totalProducts!: number;
 
   @CreateDateColumn()
   createDate!: Date;
@@ -46,10 +37,4 @@ export class Product {
 
   @Column("boolean", { default: false })
   active!: boolean;
-
-  @Column()
-  addendum!: string;
-
-  @Column()
-  type!: string;
 }
