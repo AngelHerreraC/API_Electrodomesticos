@@ -52,4 +52,7 @@ export class Product {
 
   @Column()
   type!: string;
+
+  @Column()
+  image!: string;
 }
