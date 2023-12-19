@@ -16,11 +16,6 @@ app.use(express.urlencoded({extended: false}))
 
 const PORT = 3030
 
-app.get('/ping', (_req, res) => {
-    console.log('ping')
-    res.send('pong')
-})
-
 app.listen(PORT, () => {
     console.log('server running on port')
 })

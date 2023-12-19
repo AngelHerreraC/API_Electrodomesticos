@@ -10,15 +10,15 @@ import { Purchase } from "../entities/purchase";
 
 import { PurchaseDetail } from "../entities/purchaseDetails";
 
-export default new DataSource({
-    type: "mysql",
-    host: "localhost",
-    port: 3306,
-    username: "root",
-    password: "",
-    database: "electrodomesticos",
-    entities: [User, Product, Promotion, Purchase, PurchaseDetail],
-    synchronize: true,
-    logging: false
 
+export default new DataSource({
+  type: "postgres",
+  host: "34.208.52.79",
+  port: 5432,
+  username: "admin1",
+  password: "password1",
+  database: "electrodomesticos",
+  entities: [User, Product, Promotion, Purchase, PurchaseDetail],
+  synchronize: true,
+  logging: false,
 });
