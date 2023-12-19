@@ -13,7 +13,7 @@ import { PurchaseDetail } from "../entities/purchaseDetails";
 
 export default new DataSource({
   type: "postgres",
-  host: "34.208.52.79",
+  host: "34.219.1.188",
   port: 5432,
   username: "admin1",
   password: "password1",
