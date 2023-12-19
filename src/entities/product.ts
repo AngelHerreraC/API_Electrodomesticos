@@ -53,6 +53,6 @@ export class Product {
   @Column()
   type!: string;
 
-  @Column()
+  @Column({ default: "none" })
   image!: string;
 }
